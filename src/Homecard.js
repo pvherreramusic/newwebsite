@@ -1,7 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { Rocket, Zap, Shield, ArrowRight, Menu, X } from 'lucide-react';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import Ximage from "./images/xanaxcover.jpg"
+import CigImage from "./images/cigsicover.jpg"
+import MusicPlaylist from "./MusicPlayer";
+import {DownloadLinkCigarettes} from "./DownloadCigs";
+import {DownloadLinkXanax} from "./DownloadXA";
 
-export default function LandingPage() {
+const CigarettesandWeddingsdownload =
+    "https://pvherreramusicfiles.s3.us-east-1.amazonaws.com/Cigarettes+and+Weddings.zip";
+
+const XanaxandMercydownload =
+    "https://pvherreramusicfiles.s3.us-east-1.amazonaws.com/Xanax+and+Mercy+MP3.zip";
+
+
+export function LandingPage() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
@@ -12,6 +26,9 @@ export default function LandingPage() {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+
+
 
     return (
         <div style={styles.container}>
@@ -49,136 +66,72 @@ export default function LandingPage() {
         }
       `}</style>
 
-            {/* Navigation */}
-            <nav style={{
-                ...styles.nav,
-                background: scrolled ? 'rgba(10, 10, 30, 0.95)' : 'transparent',
-                backdropFilter: scrolled ? 'blur(10px)' : 'none',
-            }}>
-                <div style={styles.navContainer}>
-                    <div style={styles.logo}>NexaFlow</div>
-                    <div style={styles.navLinks}>
-                        <a href="#features" style={styles.navLink}>Features</a>
-                        <a href="#pricing" style={styles.navLink}>Pricing</a>
-                        <a href="#about" style={styles.navLink}>About</a>
-                        <button style={styles.ctaButton}>Get Started</button>
-                    </div>
-                    <button
-                        style={styles.menuButton}
-                        onClick={() => setMenuOpen(!menuOpen)}
-                    >
-                        {menuOpen ? <X size={24} /> : <Menu size={24} />}
-                    </button>
-                </div>
-            </nav>
 
-            {/* Mobile Menu */}
-            {menuOpen && (
-                <div style={styles.mobileMenu}>
-                    <a href="#features" style={styles.mobileLink}>Features</a>
-                    <a href="#pricing" style={styles.mobileLink}>Pricing</a>
-                    <a href="#about" style={styles.mobileLink}>About</a>
-                    <button style={styles.mobileCtaButton}>Get Started</button>
-                </div>
-            )}
+
+
 
             {/* Hero Section */}
             <section style={styles.hero}>
                 <div style={styles.heroBackground}></div>
                 <div style={styles.heroContent}>
                     <h1 style={styles.heroTitle}>
-                        Build The Future
-                        <br />
-                        <span style={styles.gradient}>Today</span>
+                        Musical Experiments with a posty progressive feel.
+                        <br/>
                     </h1>
-                    <p style={styles.heroSubtitle}>
-                        Transform your workflow with cutting-edge solutions that scale with your ambition
-                    </p>
-                    <div style={styles.heroButtons}>
-                        <button style={styles.primaryButton}>
-                            Start Free Trial
-                            <ArrowRight style={styles.buttonIcon} size={20} />
-                        </button>
-                        <button style={styles.secondaryButton}>Watch Demo</button>
-                    </div>
-                    <div style={styles.heroStats}>
-                        <div style={styles.stat}>
-                            <div style={styles.statNumber}>10K+</div>
-                            <div style={styles.statLabel}>Active Users</div>
-                        </div>
-                        <div style={styles.stat}>
-                            <div style={styles.statNumber}>99.9%</div>
-                            <div style={styles.statLabel}>Uptime</div>
-                        </div>
-                        <div style={styles.stat}>
-                            <div style={styles.statNumber}>24/7</div>
-                            <div style={styles.statLabel}>Support</div>
-                        </div>
-                    </div>
                 </div>
             </section>
 
             {/* Features Section */}
+
+            <MusicPlaylist/>
+
+
+
+
             <section style={styles.features} id="features">
-                <h2 style={styles.sectionTitle}>Powerful Features</h2>
-                <p style={styles.sectionSubtitle}>Everything you need to succeed</p>
+                <h2 style={styles.sectionTitle}>Available Albums to download</h2>
+                <p style={styles.sectionSubtitle}>Free to download and no sign ups or info required.</p>
                 <div style={styles.featureGrid}>
-                    <FeatureCard
-                        icon={<Rocket size={40} />}
-                        title="Lightning Fast"
-                        description="Experience blazing speeds with our optimized infrastructure built for performance"
-                    />
-                    <FeatureCard
-                        icon={<Zap size={40} />}
-                        title="Smart Automation"
-                        description="Automate repetitive tasks and focus on what matters most to your business"
-                    />
-                    <FeatureCard
-                        icon={<Shield size={40} />}
-                        title="Enterprise Security"
-                        description="Bank-level encryption and security protocols to keep your data safe"
-                    />
+
+
+                    <Card style={{ width: '18rem' }}>
+                        <Card.Img variant="top" src={Ximage} />
+                        <Card.Body>
+                            <Card.Title>Xanax and Mercy LP 2 (2019)</Card.Title>
+                            <Card.Text>
+                                Contains 2 soundtrack themes and 8 original full tracks.
+                            </Card.Text>
+                            <DownloadLinkXanax
+                                url={XanaxandMercydownload}
+                                fileName="/Xanax+and+Mercy.zip"
+                            />
+                        </Card.Body>
+                    </Card>
+
+                    <Card style={{ width: '18rem' }}>
+                        <Card.Img variant="top" src={CigImage} />
+                        <Card.Body>
+                            <Card.Title>Cigarettes and Weddings LP 1 (2012)</Card.Title>
+                            <Card.Text>
+                                Contains 9 original full tracks.
+                            </Card.Text>
+                            <DownloadLinkCigarettes
+                                url={CigarettesandWeddingsdownload}
+                                fileName="/Cigarettes+and+Weddings.zip"
+                            />
+                        </Card.Body>
+                    </Card>
+
+
                 </div>
             </section>
 
-            {/* CTA Section */}
-            <section style={styles.cta}>
-                <div style={styles.ctaContent}>
-                    <h2 style={styles.ctaTitle}>Ready to Get Started?</h2>
-                    <p style={styles.ctaSubtitle}>Join thousands of teams already using NexaFlow</p>
-                    <button style={styles.ctaLargeButton}>Start Your Journey</button>
-                </div>
-            </section>
-
-            {/* Footer */}
-            <footer style={styles.footer}>
-                <div style={styles.footerContent}>
-                    <div style={styles.footerLogo}>NexaFlow</div>
-                    <p style={styles.footerText}>© 2025 NexaFlow. All rights reserved.</p>
-                </div>
-            </footer>
         </div>
     );
 }
 
-function FeatureCard({ icon, title, description }) {
-    const [hovered, setHovered] = useState(false);
 
-    return (
-        <div
-            style={{
-                ...styles.featureCard,
-                transform: hovered ? 'translateY(-10px)' : 'translateY(0)',
-            }}
-            onMouseEnter={() => setHovered(true)}
-            onMouseLeave={() => setHovered(false)}
-        >
-            <div style={styles.featureIcon}>{icon}</div>
-            <h3 style={styles.featureTitle}>{title}</h3>
-            <p style={styles.featureDescription}>{description}</p>
-        </div>
-    );
-}
+
 
 const styles = {
     container: {
