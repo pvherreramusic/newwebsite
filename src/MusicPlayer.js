@@ -47,6 +47,16 @@ export default function MusicPlayer() {
 
         },
 
+
+        {
+            id: 6,
+            title: "The Girl in the Red Flannel",
+            artist: "from Cigarettes and Weddings",
+            url: "https://pvherreramusicfiles.s3.us-east-1.amazonaws.com/04+The+girl+in+the+red+flannel.mp3\n3"
+
+
+        },
+
     ]);
 
     const [currentTrack, setCurrentTrack] = useState(0);
