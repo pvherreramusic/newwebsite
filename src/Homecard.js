@@ -7,6 +7,8 @@ import CigImage from "./images/cigsicover.jpg"
 import MusicPlaylist from "./MusicPlayer";
 import {DownloadLinkCigarettes} from "./DownloadCigs";
 import {DownloadLinkXanax} from "./DownloadXA";
+import VideoPlayer from "./VIdoePlayer";
+import MailTo from "./ContactForm";
 
 const CigarettesandWeddingsdownload =
     "https://pvherreramusicfiles.s3.us-east-1.amazonaws.com/Cigarettes+and+Weddings.zip";
@@ -84,6 +86,7 @@ export function LandingPage() {
             {/* Features Section */}
 
             <MusicPlaylist/>
+            <VideoPlayer/>
 
 
 
@@ -113,7 +116,7 @@ export function LandingPage() {
                         <Card.Body>
                             <Card.Title>Cigarettes and Weddings LP 1 (2012)</Card.Title>
                             <Card.Text>
-                                Contains 9 original full tracks.
+                                Contains 8 original full tracks.
                             </Card.Text>
                             <DownloadLinkCigarettes
                                 url={CigarettesandWeddingsdownload}
@@ -125,7 +128,7 @@ export function LandingPage() {
 
                 </div>
             </section>
-
+            <MailTo></MailTo>
         </div>
     );
 }

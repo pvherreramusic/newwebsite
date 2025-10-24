@@ -6,7 +6,7 @@ export default function MusicPlayer() {
         {
             id: 1,
             title: "Selena Gomez ",
-            artist: " from Cigarettes and Weddings",
+            artist: "from Cigarettes and Weddings",
             url: "https://pvherreramusicfiles.s3.us-east-1.amazonaws.com/01+Selena+Gomez.mp3"
         },
         {
@@ -14,6 +14,37 @@ export default function MusicPlayer() {
             title: "Surf Worshiper",
             artist: "from Xanax and Mercy",
             url: "https://pvherreramusicfiles.s3.us-east-1.amazonaws.com/SurfWorshipperMix02.mp3"
+        },
+        {
+            id: 3,
+            title: "Killer Bears at the Wedding",
+            artist: "from Cigarettes and Weddings",
+            url: "https://pvherreramusicfiles.s3.us-east-1.amazonaws.com/03+Killer+bears+at+the+wedding.mp3"
+        },
+        {
+            id: 4,
+            title: "The Unforgiven",
+            artist: "from Xanax and Mercy",
+            url: "https://pvherreramusicfiles.s3.us-east-1.amazonaws.com/TheUnforgivenMix02.mp3"
+
+
+        },
+        {
+            id: 5,
+            title: "Midnight Masquerade",
+            artist: "from Digital Smiles Dynasty 2008 Collection Vol 1",
+            url: "https://pvherreramusicfiles.s3.us-east-1.amazonaws.com/midnight+masquerade(1).mp3"
+
+
+        },
+
+        {
+            id: 6,
+            title: "Flowers",
+            artist: "from Xanax and Mercy",
+            url: "https://pvherreramusicfiles.s3.us-east-1.amazonaws.com/FlowersMix02.mp3"
+
+
         },
 
     ]);
