@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Rocket, Zap, Shield, ArrowRight, Menu, X } from 'lucide-react';
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Ximage from "./images/xanaxcover.jpg"
 import CigImage from "./images/cigsicover.jpg"
@@ -8,7 +6,8 @@ import MusicPlaylist from "./MusicPlayer";
 import {DownloadLinkCigarettes} from "./DownloadCigs";
 import {DownloadLinkXanax} from "./DownloadXA";
 import VideoPlayer from "./VIdoePlayer";
-import MailTo from "./ContactForm";
+import ConcertDates from "./shows"
+
 
 const CigarettesandWeddingsdownload =
     "https://pvherreramusicfiles.s3.us-east-1.amazonaws.com/Cigarettes+and+Weddings.zip";
@@ -86,6 +85,7 @@ export function LandingPage() {
             {/* Features Section */}
 
             <MusicPlaylist/>
+          <ConcertDates/>
             <VideoPlayer/>
 
 
@@ -128,7 +128,7 @@ export function LandingPage() {
 
                 </div>
             </section>
-            <MailTo></MailTo>
+
         </div>
     );
 }
