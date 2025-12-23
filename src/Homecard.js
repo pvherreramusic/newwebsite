@@ -7,13 +7,10 @@ import {DownloadLinkCigarettes} from "./DownloadCigs";
 import {DownloadLinkXanax} from "./DownloadXA";
 import VideoPlayer from "./VIdoePlayer";
 import ConcertDates from "./shows"
+import BandcampCigs from "./BandcampCigs";
+import BandcampXanax from "./BandcampXanax";
 
 
-const CigarettesandWeddingsdownload =
-    "https://pvherreramusicfiles.s3.us-east-1.amazonaws.com/Cigarettes+and+Weddings.zip";
-
-const XanaxandMercydownload =
-    "https://pvherreramusicfiles.s3.us-east-1.amazonaws.com/Xanax+and+Mercy+MP3.zip";
 
 
 export function LandingPage() {
@@ -76,20 +73,13 @@ export function LandingPage() {
                 <div style={styles.heroBackground}></div>
                 <div style={styles.heroContent}>
                     <h1 style={styles.heroTitle}>
-                        Musical Experiments with a posty progressive feel.
+                        PV Herrera's Musical Experiments
                         <br/>
                     </h1>
                 </div>
             </section>
 
             {/* Features Section */}
-
-            <MusicPlaylist/>
-          <ConcertDates/>
-            <VideoPlayer/>
-
-
-
 
             <section style={styles.features} id="features">
                 <h2 style={styles.sectionTitle}>Available Albums to download</h2>
@@ -98,36 +88,26 @@ export function LandingPage() {
 
 
                     <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src={Ximage} />
-                        <Card.Body>
-                            <Card.Title>Xanax and Mercy LP 2 (2019)</Card.Title>
-                            <Card.Text>
-                                Contains 2 soundtrack themes and 8 original full tracks.
-                            </Card.Text>
-                            <DownloadLinkXanax
-                                url={XanaxandMercydownload}
-                                fileName="/Xanax+and+Mercy.zip"
-                            />
-                        </Card.Body>
+                        <BandcampXanax></BandcampXanax>
                     </Card>
 
                     <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src={CigImage} />
-                        <Card.Body>
-                            <Card.Title>Cigarettes and Weddings LP 1 (2012)</Card.Title>
-                            <Card.Text>
-                                Contains 8 original full tracks.
-                            </Card.Text>
-                            <DownloadLinkCigarettes
-                                url={CigarettesandWeddingsdownload}
-                                fileName="/Cigarettes+and+Weddings.zip"
-                            />
-                        </Card.Body>
+                        <BandcampCigs></BandcampCigs>
+
                     </Card>
 
 
                 </div>
             </section>
+            <VideoPlayer/>
+
+          <ConcertDates/>
+
+
+
+
+
+
 
         </div>
     );
