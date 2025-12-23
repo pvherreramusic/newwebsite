@@ -9,6 +9,7 @@ import VideoPlayer from "./VIdoePlayer";
 import ConcertDates from "./shows"
 import BandcampCigs from "./BandcampCigs";
 import BandcampXanax from "./BandcampXanax";
+import YouTubePlayer from "./VIdoePlayer";
 
 
 
@@ -99,7 +100,7 @@ export function LandingPage() {
 
                 </div>
             </section>
-            <VideoPlayer/>
+           < YouTubePlayer/>
 
           <ConcertDates/>
 
