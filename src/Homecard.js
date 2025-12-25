@@ -12,6 +12,7 @@ import BandcampXanax from "./BandcampXanax";
 import YouTubePlayer from "./VIdoePlayer";
 import {ImageComponent} from "./ImageCompment";
 import Bio from "./Bio";
+import SurfYouTubePlayer from "./SurfYOUTUBEVIDEO";
 
 
 
@@ -104,7 +105,7 @@ export function LandingPage() {
                 </div>
             </section>
            < YouTubePlayer/>
-
+            <SurfYouTubePlayer/>
           <ConcertDates/>
 
 
