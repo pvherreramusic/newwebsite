@@ -11,6 +11,7 @@ import BandcampCigs from "./BandcampCigs";
 import BandcampXanax from "./BandcampXanax";
 import YouTubePlayer from "./VIdoePlayer";
 import {ImageComponent} from "./ImageCompment";
+import Bio from "./Bio";
 
 
 
@@ -82,7 +83,7 @@ export function LandingPage() {
             </section>
 
             {/* Features Section */}
-            <ImageComponent></ImageComponent>
+            <Bio/>
 
             <section style={styles.features} id="features">
                 <h2 style={styles.sectionTitle}>Available Albums to download</h2>
