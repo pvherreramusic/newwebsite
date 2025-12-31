@@ -86,6 +86,9 @@ export function LandingPage() {
             {/* Features Section */}
             <Bio/>
 
+            <h2 style={styles.sectionTitle}>New Content</h2>
+            <SurfYouTubePlayer/>
+
             <section style={styles.features} id="features">
                 <h2 style={styles.sectionTitle}>Available Albums to download</h2>
                 <p style={styles.sectionSubtitle}>Free to download and no sign ups or info required.</p>
@@ -105,7 +108,7 @@ export function LandingPage() {
                 </div>
             </section>
            < YouTubePlayer/>
-            <SurfYouTubePlayer/>
+
           <ConcertDates/>
 
 
