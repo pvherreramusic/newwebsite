@@ -13,6 +13,7 @@ import YouTubePlayer from "./VIdoePlayer";
 import {ImageComponent} from "./ImageCompment";
 import Bio from "./Bio";
 import SurfYouTubePlayer from "./SurfYOUTUBEVIDEO";
+import BandcampEmbedFear from "./BandcampFear";
 
 
 
@@ -87,6 +88,11 @@ export function LandingPage() {
             <Bio/>
 
             <h2 style={styles.sectionTitle}>New Content</h2>
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}>
+                <Card style={{ width: '18rem' }}>
+                    <BandcampEmbedFear />
+                </Card>
+            </div>
             <SurfYouTubePlayer/>
 
             <section style={styles.features} id="features">
@@ -101,6 +107,11 @@ export function LandingPage() {
 
                     <Card style={{ width: '18rem' }}>
                         <BandcampCigs></BandcampCigs>
+
+                    </Card>
+
+                    <Card style={{ width: '18rem' }}>
+                        <BandcampEmbedFear></BandcampEmbedFear>
 
                     </Card>
 
