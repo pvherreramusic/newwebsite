@@ -14,6 +14,7 @@ import {ImageComponent} from "./ImageCompment";
 import Bio from "./Bio";
 import SurfYouTubePlayer from "./SurfYOUTUBEVIDEO";
 import BandcampEmbedFear from "./BandcampFear";
+import ContactForm from "./ContactForm";
 
 
 
@@ -119,8 +120,7 @@ export function LandingPage() {
                 </div>
             </section>
            < YouTubePlayer/>
-
-          <ConcertDates/>
+            <ContactForm></ContactForm>
 
 
 
