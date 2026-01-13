@@ -79,7 +79,7 @@ export function LandingPage() {
                 <div style={styles.heroBackground}></div>
                 <div style={styles.heroContent}>
                     <h1 style={styles.heroTitle}>
-                        PV Herrera's Musical Experiments
+                        PV Herrera's Musical Tangents
                         <br/>
                     </h1>
                 </div>
