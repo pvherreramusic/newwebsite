@@ -1,20 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
-import Ximage from "./images/xanaxcover.jpg"
-import CigImage from "./images/cigsicover.jpg"
-import MusicPlaylist from "./MusicPlayer";
-import {DownloadLinkCigarettes} from "./DownloadCigs";
-import {DownloadLinkXanax} from "./DownloadXA";
-import VideoPlayer from "./VIdoePlayer";
-import ConcertDates from "./shows"
 import BandcampCigs from "./BandcampCigs";
 import BandcampXanax from "./BandcampXanax";
 import YouTubePlayer from "./VIdoePlayer";
-import {ImageComponent} from "./ImageCompment";
 import Bio from "./Bio";
 import SurfYouTubePlayer from "./SurfYOUTUBEVIDEO";
 import BandcampEmbedFear from "./BandcampFear";
 import ContactForm from "./ContactForm";
+import Navbar from "./NavBar";
+import Hero from "./Hero";
+import NewContent from "./NewContent";
 
 
 
@@ -32,105 +28,49 @@ export function LandingPage() {
     }, []);
 
 
-
-
     return (
-        <div style={styles.container}>
-            <style>{`
-        @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-20px); }
-        }
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        @keyframes gradientShift {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
-        }
-        @keyframes pulse {
-          0%, 100% { opacity: 1; }
-          50% { opacity: 0.5; }
-        }
-        * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-        }
-        body {
-          overflow-x: hidden;
-        }
-      `}</style>
+
+        <>
 
 
+            <div style={styles.container}>
 
 
+<Hero></Hero>
+                <Bio></Bio>
+                <NewContent></NewContent>
 
-            {/* Hero Section */}
-            <section style={styles.hero}>
-                <div style={styles.heroBackground}></div>
-                <div style={styles.heroContent}>
-                    <h1 style={styles.heroTitle}>
-                        PV Herrera's Musical Tangents
-                        <br/>
-                    </h1>
-                </div>
-            </section>
+                <section style={styles.features} id="features">
+                    <h2 style={styles.sectionTitle}>Available Albums to download</h2>
+                    <p style={styles.sectionSubtitle}>Free to download and no sign ups or info required.</p>
+                    <div style={styles.featureGrid}>
 
-            {/* Features Section */}
-            <Bio/>
 
-            <h2 style={styles.sectionTitle}>New Content</h2>
-            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}>
-                <Card style={{ width: '18rem' }}>
-                    <BandcampEmbedFear />
-                </Card>
+                        <Card style={{width: '18rem'}}>
+                            <BandcampXanax></BandcampXanax>
+                        </Card>
+
+                        <Card style={{width: '18rem'}}>
+                            <BandcampCigs></BandcampCigs>
+
+                        </Card>
+
+                        <Card style={{width: '18rem'}}>
+                            <BandcampEmbedFear></BandcampEmbedFear>
+
+                        </Card>
+
+
+                    </div>
+                </section>
+                < YouTubePlayer/>
+                <ContactForm></ContactForm>
+
+
             </div>
-            <SurfYouTubePlayer/>
-
-            <section style={styles.features} id="features">
-                <h2 style={styles.sectionTitle}>Available Albums to download</h2>
-                <p style={styles.sectionSubtitle}>Free to download and no sign ups or info required.</p>
-                <div style={styles.featureGrid}>
-
-
-                    <Card style={{ width: '18rem' }}>
-                        <BandcampXanax></BandcampXanax>
-                    </Card>
-
-                    <Card style={{ width: '18rem' }}>
-                        <BandcampCigs></BandcampCigs>
-
-                    </Card>
-
-                    <Card style={{ width: '18rem' }}>
-                        <BandcampEmbedFear></BandcampEmbedFear>
-
-                    </Card>
-
-
-                </div>
-            </section>
-           < YouTubePlayer/>
-            <ContactForm></ContactForm>
-
-
-
-
-
-
-
-        </div>
-    );
-}
+        </>
+    )
+};
 
 
 

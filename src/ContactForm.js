@@ -68,7 +68,7 @@ export default function ContactForm() {
                 textAlign: 'center'
             }}>Contact Us</h2>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
+            <div id ="contact" style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
                 <div>
                     <label style={{ display: 'block', marginBottom: '5px', color: '#555', fontWeight: '500' }}>
                         Name

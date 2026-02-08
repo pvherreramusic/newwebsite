@@ -65,7 +65,7 @@ export default function Bio() {
     };
 
     return (
-        <div style={containerStyle}>
+        <div id="bio" style={containerStyle}>
             <div style={imageContainerStyle}>
                 <img
                     src={require('./images/pvherreralive.jpg')}
