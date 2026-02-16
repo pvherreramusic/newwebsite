@@ -78,7 +78,7 @@ export default function Bio() {
             <p style={titleStyle}>Instrumental Rock Musician/Guitarist</p>
 
             <p style={bioTextStyle}>
-                P.V. Herrera is a musician from San Luis Obispo County. He started writing new music under his stage name P.V. Herrera in 2011. He has been writing music since 2007 under his old project The Danger Girl Starship Experiment and has released 2 albums under his stage name. He has performed a number of live shows and has opened for El Ten Eleven, White Arrows, Pit Per Pat and Evangelicals. You can download his music from his bandcamp links for free.
+                P.V. Herrera is a musician from San Luis Obispo County. He started writing new music under his stage name P.V. Herrera in 2011. He has been writing music since 2007 under his old project The Danger Girl Starship Experiment and has released 2 albums under his stage name. He has performed a number of live shows and has opened for El Ten Eleven, White Arrows, Pit Per Pat and Evangelicals. You can download his music on this site for free.
             </p>
 
             {/*<div style={socialLinksStyle}>*/}

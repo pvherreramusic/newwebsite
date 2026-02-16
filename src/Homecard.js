@@ -11,6 +11,7 @@ import ContactForm from "./ContactForm";
 import Navbar from "./NavBar";
 import Hero from "./Hero";
 import NewContent from "./NewContent";
+import DownloadXA from "./DownloadXA";
 
 
 
@@ -47,7 +48,7 @@ export function LandingPage() {
 
 
                         <Card style={{width: '18rem'}}>
-                            <BandcampXanax></BandcampXanax>
+                            <DownloadXA/>
                         </Card>
 
                         <Card style={{width: '18rem'}}>

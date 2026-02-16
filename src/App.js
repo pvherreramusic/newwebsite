@@ -10,6 +10,9 @@ import './App.css'
 import MusicDownloads from "./MusicDownloads";
 import YouTubePlayer from "./VIdoePlayer";
 import ContactForm from "./ContactForm";
+import DownloadPage from "./Download Page";
+import MusicPlayer from "./MusicPlayer";
+import SurfYouTubePlayer from "./SurfYOUTUBEVIDEO";
 
 
 function App() {
@@ -18,9 +21,11 @@ function App() {
             <Navbar />
             <Hero/>
             <Bio/>
+            <MusicPlayer/>
             <NewContent/>
-            <MusicDownloads/>
+            <DownloadPage/>
             <YouTubePlayer/>
+            <SurfYouTubePlayer/>
             <ContactForm/>
         </div>
     );

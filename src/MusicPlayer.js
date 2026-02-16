@@ -5,7 +5,7 @@ export default function MusicPlayer() {
     const [playlist] = useState([
         {
             id: 1,
-            title: "Selena Gomez ",
+            title: "Selena Gomez",
             artist: "from Cigarettes and Weddings",
             url: "https://pvherreramusicfiles.s3.us-east-1.amazonaws.com/01+Selena+Gomez.mp3"
         },
@@ -17,12 +17,18 @@ export default function MusicPlayer() {
         },
         {
             id: 3,
+            title: "Nalha feat Graham Marlowe of Lakewaves Trio",
+            artist: "from Her Atmosphere Causes The Fear",
+            url: "https://pvherreramusicfiles.s3.us-east-1.amazonaws.com/04+Nahla.mp3"
+        },
+        {
+            id:4,
             title: "Killer Bears at the Wedding",
             artist: "from Cigarettes and Weddings",
             url: "https://pvherreramusicfiles.s3.us-east-1.amazonaws.com/03+Killer+bears+at+the+wedding.mp3"
         },
         {
-            id: 4,
+            id: 5,
             title: "The Unforgiven",
             artist: "from Xanax and Mercy",
             url: "https://pvherreramusicfiles.s3.us-east-1.amazonaws.com/TheUnforgivenMix02.mp3"
@@ -30,7 +36,7 @@ export default function MusicPlayer() {
 
         },
         {
-            id: 5,
+            id: 6,
             title: "Midnight Masquerade",
             artist: "from Digital Smiles Dynasty 2008 Collection Vol 1",
             url: "https://pvherreramusicfiles.s3.us-east-1.amazonaws.com/midnight+masquerade(1).mp3"
@@ -39,7 +45,7 @@ export default function MusicPlayer() {
         },
 
         {
-            id: 6,
+            id: 7,
             title: "Flowers",
             artist: "from Xanax and Mercy",
             url: "https://pvherreramusicfiles.s3.us-east-1.amazonaws.com/FlowersMix02.mp3"
@@ -49,7 +55,14 @@ export default function MusicPlayer() {
 
 
         {
-            id: 6,
+            id: 8,
+            title: "Dear Elizabeth",
+            artist: "from Her Atmosphere Causes The Fear",
+            url: "https://pvherreramusicfiles.s3.us-east-1.amazonaws.com/02+Dear+Elizabeth.mp3"
+
+
+        }, {
+            id: 9,
             title: "The Girl in the Red Flannel",
             artist: "from Cigarettes and Weddings",
             url: "https://pvherreramusicfiles.s3.us-east-1.amazonaws.com/04+The+girl+in+the+red+flannel.mp3\n3"
@@ -129,7 +142,7 @@ export default function MusicPlayer() {
     const progress = duration ? (currentTime / duration) * 100 : 0;
 
     return (
-        <div style={{
+        <div id = 'music' style={{
             minHeight: '100vh',
             background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
             display: 'flex',

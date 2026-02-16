@@ -15,7 +15,10 @@ const Navbar = () => {
                 New Content
             </Link>
             <Link to="music" smooth={true} duration={100} style={{ cursor: 'pointer', color: 'white' }}>
-                Music/Downaloads
+                Music
+            </Link>
+            <Link to="downloads" smooth={true} duration={100} style={{ cursor: 'pointer', color: 'white' }}>
+                Downloads
             </Link>
             <Link to="videos" smooth={true} duration={100} style={{ cursor: 'pointer', color: 'white' }}>
                 Videos

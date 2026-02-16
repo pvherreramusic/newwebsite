@@ -1,9 +1,15 @@
-import React from 'react';
 import Card from "react-bootstrap/Card";
+import DownloadXA from "./DownloadXA";
+import BandcampCigs from "./BandcampCigs";
 import BandcampEmbedFear from "./BandcampFear";
-import SurfYouTubePlayer from "./SurfYOUTUBEVIDEO";
+import React from "react";
+import Image from "react-bootstrap/Image";
+import picXanax from "./images/xanaxcover.jpg";
+import picCiagettes from "./images/cigsicover.jpg";
+import CigDownloadFiles from "./DownloadCigs";
 
-const NewContent = () => {
+export default function DownloadPage() {
+
     const styles = {
         container: {
             fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
@@ -297,22 +303,38 @@ const NewContent = () => {
             color: 'rgba(255, 255, 255, 0.5)',
         },
     };
-
-
     return (
-        <div id="newcontent" style={styles.container}>
+        <section style={styles.features} id="downloads">
+            <h2 style={styles.sectionTitle}>Available Albums to download</h2>
+            <p style={styles.sectionSubtitle}>Free to download and no sign ups or info required.</p>
+            <div style={styles.featureGrid}>
 
 
-        <h2 style={styles.sectionTitle}>New Content</h2>
-    {/*<div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh'}}>*/}
-    {/*</div>*/}
-    <h3>New music</h3>
-            <p>2 featured tracks from the  2011 ep  "Her Atmosphere Causes the Fear". Those tracks are on the music player under the names "Nahla" and "Dear Elizabeth". The full ep will be on the site for free soon. Enjoy! "</p>
+                <Card style={{width: '18rem'}}>
+                    <Image src={picXanax} rounded fluid/>
+                    <DownloadXA/>
+                </Card>
+
+                <Card style={{width: '18rem'}}>
+                    <Image src={picCiagettes} rounded fluid/>
+                    <CigDownloadFiles></CigDownloadFiles>
+
+
+                </Card>
+
+                {/*<Card style={{width: '18rem'}}>*/}
+                {/*    <Image src={picCiagettes} rounded fluid/>*/}
+                {/*    <CigDownloadFiles></CigDownloadFiles>*/}
+
+
+                {/*</Card>*/}
+
+
             </div>
+        </section>
 
 
+    )
 
-    );
-};
+}
 
-export default NewContent;
