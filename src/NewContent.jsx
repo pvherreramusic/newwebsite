@@ -1,34 +1,4 @@
 import React from 'react';
-import BandcampEmbedFear from "./BandcampFear";
-import SurfYouTubePlayer from "./SurfYOUTUBEVIDEO";
-
-const NewContent = () => {
-    return (
-        <section id="newcontent" style={styles.section}>
-            <div style={styles.inner}>
-                <h2 style={styles.heading}>New Content</h2>
-                <div style={styles.divider} />
-
-                <div style={styles.block}>
-                    <span style={styles.tag}>New Music</span>
-                    <h3 style={styles.subheading}>Her Atmosphere Causes the Fear...out now!</h3>
-                    <p style={styles.body}>
-                        Her Atmosphere Causes the Fear is now out as a free EP download on this site.
-                    </p>
-                </div>
-
-                <div style={styles.block}>
-                    <span style={styles.tag}>New Music</span>
-                    <h3 style={styles.subheading}>Her Atmosphere Causes the Fear</h3>
-                    <p style={styles.body}>
-                        Two featured tracks from the 2011 EP — <em>"Nahla"</em> and <em>"Dear Elizabeth"</em> — are
-                        available now on the music player below. The full EP will be on the site for free soon. Enjoy!
-                    </p>
-                </div>
-            </div>
-        </section>
-    );
-};
 
 const styles = {
     section: {
@@ -86,14 +56,67 @@ const styles = {
         lineHeight: '1.75',
         color: 'rgba(255, 255, 255, 0.65)',
     },
-    embedWrapper: {
-        marginTop: '2rem',
-        borderRadius: '12px',
-        overflow: 'hidden',
-        border: '1px solid rgba(255, 255, 255, 0.08)',
-        background: 'rgba(255, 255, 255, 0.03)',
-        padding: '1rem',
+    link: {
+        color: '#a78bfa',
+        textDecoration: 'underline',
     },
 };
+
+const CONTENT_BLOCKS = [
+    {
+        tag: 'Reviews',
+        heading: 'An old review of an early release from 10+ years ago',
+        body: (
+            <>
+                In 2014, I released an album of demos and early recordings — experiments from my early days as a
+                musician. Some of these songs have since made it (or will make it) onto future albums. The release
+                was met with criticism and was eventually shelved, but it remains a meaningful reflection of where
+                I started. Since then I've grown considerably, collaborating with other musicians and continuing to
+                develop my craft.{' '}
+                <a
+                    href="https://www.cerebralrift.org/very-serious-knock-knock-joke-is-no-april-fools-prank/"
+                    style={styles.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Read the review
+                </a>{' '}
+                and listen to the old demos via BFW Recordings.
+            </>
+        ),
+    },
+    {
+        tag: 'New Music',
+        heading: 'Her Atmosphere Causes the Fear — out now!',
+        body: 'Her Atmosphere Causes the Fear is now available as a free EP download on this site.',
+    },
+    {
+        tag: 'New Music',
+        heading: 'Her Atmosphere Causes the Fear',
+        body: (
+            <>
+                Two featured tracks from the 2011 EP — <em>Nahla</em> and <em>Dear Elizabeth</em> — are available
+                on the music player below. The full EP will be available for free on the site soon. Enjoy!
+            </>
+        ),
+    },
+];
+
+const NewContent = () => (
+    <section id="newcontent" style={styles.section}>
+        <div style={styles.inner}>
+            <h2 style={styles.heading}>New Content</h2>
+            <div style={styles.divider} />
+
+            {CONTENT_BLOCKS.map(({ tag, heading, body }) => (
+                <div key={heading} style={styles.block}>
+                    <span style={styles.tag}>{tag}</span>
+                    <h3 style={styles.subheading}>{heading}</h3>
+                    <p style={styles.body}>{body}</p>
+                </div>
+            ))}
+        </div>
+    </section>
+);
 
 export default NewContent;
